@@ -3,7 +3,7 @@
     + https://wiki.fysik.dtu.dk/ase/index.html
 * ASE webpage has its own tutorial, and this repository supplements it.
 * Recommended workflow of the tutorial:
-    1. [energy calculation](./energy.md)
+    1. energy calculation --> [energy.md](./energy.md)
     2. geometry optimization
     3. molecular dynamics
     4. nudged elastic band (NEB)
