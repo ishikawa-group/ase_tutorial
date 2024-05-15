@@ -12,7 +12,7 @@
 * The main object in ASE is `Atoms` object. Atoms object is the list of `Atom` object, and Atom object has attributes like an element symbol, positions (in Cartesian coordinate).
 * So first thing to do with ASE is define the Atoms object, and assign the elements and positions of consisting Atom object.
 
-```python{cmd}
+```python
 from ase import Atoms
 from ase.build import molecule
 from ase.calculators.emt import EMT
@@ -40,7 +40,8 @@ view(mol)
 * In this section, we calculate the potential energy of bulk mateial, which is periodic in three-dimensions.
 * The following script treats the copper (Cu) bulk material.
 * The simulation is done for **unit cell**, which is an elemental block of the bulk material. The periodic condition is applied to the unit cell, so it is repeated in x-, y-, and z-directions to represent the bulk.
-```python{cmd}
+
+```python
 from ase import Atoms
 from ase.build import bulk
 from ase.calculators.emt import EMT
@@ -71,7 +72,7 @@ view(bulk)
 * Surface is made by "cutting" the bulk material. Thus, we need to define the direction of cutting, like horizontally cutting or vertically cutting the butter. This direction is specified with **Miller index**, which has three integer numbers (e.g. "111", "100").
 * Since a bulk material has its crystal structure (like fcc, bcc), the speficiation of the surface should be like "fcc-111", "fcc-100", "bcc-100".
 
-```python{cmd}
+```python
 from ase import Atoms
 from ase.build import fcc111
 from ase.calculators.emt import EMT
@@ -99,12 +100,12 @@ view(slab)
 * Therefore more negative adsorption energy means stronger binding of molecule on the surface.
 * Adsorbing atoms or molecules are called **adsorbates**.
 * Adsorption energy can be calculation from three terms:
-    + $E_{mol}$: potential energy of adsorbate
-    + $E_{slab}$: potential energy of slab
-    + $E_{mol+slab}$: potential energy of adsorbate plus slab
+    + $E_{mol}$ : potential energy of adsorbate
+    + $E_{slab}$ : potential energy of slab
+    + $E_{mol+slab}$ : potential energy of adsorbate plus slab
     + $E_{ads} = E_{mol+slab} - (E_{mol} + E_{slab})$
 
-```python{cmd}
+```python
 from ase import Atoms
 from ase.build import add_adsorbate, fcc111
 from ase.calculators.emt import EMT
