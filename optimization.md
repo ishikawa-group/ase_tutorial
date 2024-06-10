@@ -6,7 +6,7 @@
 
 * The following script does the geometry optimization of a molecule.
 
-```python{cmd}
+```python
 from ase import Atoms
 from ase.build import molecule
 from ase.optimize.bfgs import BFGS
@@ -35,7 +35,7 @@ os.system("rm test.traj")
 * In calculation, however, we cannot use such large number of atomic layers. Thus, to mimic the above situmation, we constrain (or fix) the atomic position of lower part of the slab.
 * The geometry optimization with constraint is done in the following way.
 
-```python{cmd}
+```python
 from ase.build import fcc111
 from ase.constraints import FixAtoms
 from ase.visualize import view
